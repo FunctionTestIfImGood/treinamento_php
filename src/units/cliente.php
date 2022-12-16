@@ -1,5 +1,11 @@
 <?php
-class Cliente
+
+interface ICliente {
+    public function validateName();
+    public function validateAge();
+}
+
+class Cliente implements ICliente
 {
  public function __construct(public string $nome, public string $endereco, public readonly int $idade) 
  {
